@@ -1,0 +1,85 @@
+body {
+    background-color: rgb(31, 31, 31);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Fira Code', monospace;
+}
+.container {
+    display: flex;
+    gap: 20px;
+}
+.main {
+    padding: 20px;
+    border: 1px solid white;
+}
+e {
+    margin: 10px 0;
+    animation: slideUp 1.5s ease-out;
+    color: #ffffff; /* Neon white */
+    text-shadow:
+        0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 21px #fff,
+        0 0 42px rgb(38, 46, 43),
+        0 0 82px rgb(18, 19, 19),
+        0 0 92px #0fa,
+        0 0 102px #0fa,
+        0 0 151px #0fa;
+}
+.side-section {
+    padding: 20px;
+    border: 1px solid white;
+    background-color: rgb(40, 40, 40);
+    display: flex;
+    flex-direction: column; 
+    align-items: center;  
+  }
+  
+  .icons {
+    display: flex;
+    justify-content: center; 
+    gap: 15px; 
+  }
+  
+  .icons img {
+    filter: brightness(0) invert(1); 
+  }
+  .discord-widget {
+    background-color: #2f3136;  /* Dark background like Discord */
+    border: 2px solid #7289da;  /* Discord blue border */
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 300px;
+    margin: 20px auto;
+    font-family: 'Fira Code', monospace;
+    color: white;
+  }
+  
+  .widget-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .discord-icon {
+    width: 30px;
+    height: 30px;
+  }
+  
+  h3 {
+    margin: 0;
+    font-size: 22px;
+  }
+  
+  a {
+    color: #7289da;  /* Discord blue for links */
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
