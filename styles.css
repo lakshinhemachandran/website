@@ -55,3 +55,7 @@ a:hover {
 .icons img {
     filter: brightness(0) invert(1); 
   }
+  ::selection {
+    background: white;
+    color: black;
+  }
