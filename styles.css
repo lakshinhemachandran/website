@@ -34,7 +34,6 @@ body {
     padding: 20px;
     max-width: 300px;
     margin: 20px auto;
-    display: inline-block;
 }
 .widget-header {
     display: flex;
