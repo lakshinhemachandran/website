@@ -10,7 +10,6 @@
     <meta property="og:image" content="https://quantumdev.cc/images/quantum.png">
     <meta property="og:url" content="https://quantumdev.cc">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="https://quantumdev.cc/images/quantum.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="QuantumDev">
     <meta name="twitter:description" content="Hi there! I'm QuantumDev, a teenage developer who is currently learning Full Stack Development.">
@@ -24,11 +23,11 @@
           "@context": "https://schema.org",
           "@type": "Person",
           "name": "QuantumDev",
-          "alternateName": "LakshinHemachandran",
+          "alternateName": "Lakshin Hemachandran",
           "url": "https://quantumdev.cc",
           "sameAs": [
             "https://github.com/lakshinhemachandran",
-            "https://discord.gg/YOUR_DISCORD_SERVER"
+            "https://discord.com/users/1348440369733439629/"
           ],
           "jobTitle": "Full Stack Developer",
           "worksFor": {
@@ -36,22 +35,60 @@
             "name": "Self-Employed"
           },
           "knowsAbout": ["Full Stack Development", "Web Development"],
-          "image": "https://quantumdev.cc/images/quantum.png"
+          "image": "https://quantumdev.cc/images/quantum.png",
+          "logo": "https://quantumdev.cc/images/quantum.png"
         }
-        </script> 
-        <meta name="keywords" content="QuantumDev, Full Stack Developer, Web Development, Programming, Coding, QuantumDev.cc">       
+    </script>
+    <meta name="keywords" content="QuantumDev, Full Stack Developer, Web Development, Programming, Coding, QuantumDev.cc">
 </head>
 <body>
     <div id="particles-js"></div>
-	    <div id="particles-js"></div>
     <div class="container">
         <header>
+            <br><br><br><br>
             <img src="images/quantum.png" height="100">
-            <h1 id="title"> QuantumDev </h1>
-            <h2 id="subtitle">Web Developer</h2>
+            <h1 id="title">QuantumDev</h1>
+            <div class="rotating-text-container">
+                <div class="rotating-text">
+                  <span></span>
+                </div>
+            </div>
+            <script>
+                const rotatingText = document.querySelector('.rotating-text span');
+                const texts = [
+                    '🇮🇳 Indian 🇮🇳',
+                    '</> Developer </>',
+                    '🧑🏽‍💻 Tech Enthusiast 🧑🏽‍💻',
+                    '🏫 Still Goes to School 🏫'
+                ];
+
+                let currentTextIndex = 0;
+                let currentCharIndex = 0;
+                let isDeleting = false;
+
+                function typeText() {
+                    const currentText = texts[currentTextIndex];
+                    if (isDeleting) {
+                        rotatingText.textContent = currentText.slice(0, currentCharIndex--);
+                    } else {
+                        rotatingText.textContent = currentText.slice(0, currentCharIndex++);
+                    }
+
+                    if (!isDeleting && currentCharIndex === currentText.length) {
+                        setTimeout(() => { isDeleting = true; }, 500);
+                    } else if (isDeleting && currentCharIndex === 0) {
+                        isDeleting = false;
+                        currentTextIndex = (currentTextIndex + 1) % texts.length;
+                    }
+                }
+
+                setInterval(typeText, 80); // Faster typing speed (80ms)
+            </script>
         </header>
         <p> Hi there! I'm QuantumDev, a teenage developer who is currently learning Full Stack Web Development.</p>
-        
+
+        <br>
+        <!-- Social Media Icons -->
         <div class="icons">
             <a href="mailto:hello@quantumdev.cc" target="_blank">
                 <img src="https://img.icons8.com/ios-filled/50/000000/email-open.png" alt="Email">
@@ -70,43 +107,127 @@
         </div>
         <p> Want a website developed by me? Fill out the form <a href="/request">here</a> or DM me on <a href="#discord">Discord!</a></p>
         <p> I am the owner of <a target="_blank" href="https://discord.gg/brceFM3HSE">Starry Systems</a>, a web development company, along with <a href="#friends">My Friends</a></p>
-        <img href="images/starry.png"> 
+        <img href="images/starry.png">
         <div id="friends">
-        <h3>Friends:</h3>
-
-        <div class="discord-widget">
-            <div class="widget-header">
-                <img src="https://cdn.discordapp.com/avatars/1335719497293758477/aed4b684bd5e7945dd52b1620bd104c3.webp" alt="pfp" class="discord-icon">
-                <h3>Noah</h3>
+            <h3>Friends:</h3>
+            <div class="discord-widget">
+                <div class="widget-header">
+                    <img src="https://cdn.discordapp.com/avatars/1335719497293758477/aed4b684bd5e7945dd52b1620bd104c3.webp" alt="pfp" class="discord-icon">
+                    <h3>Noah</h3>
+                </div>
+                <p>Discord Profile: <a href="https://discord.com/users/1335719497293758477" target="_blank">Visit Profile</a></p>
+                <p>Website: <a href="https://guns.lol/noahcode" target="_blank">https://guns.lol/noahcode</a></p>
             </div>
-            <p>Discord Profile: <a href="https://discord.com/users/1335719497293758477" target="_blank">Visit Profile</a></p>
-            <p>Website: <a href="https://guns.lol/noahcode" target="_blank">https://guns.lol/noahcode</a></p>
-        </div>
-        <div class="discord-widget">
-            <div class="widget-header">
-                <img src="https://yt3.googleusercontent.com/P2hEhef03_6x3ZWeRYm8w7SN5dvn9sKD8YZdZptb3Pnc9BU6_yR5mYDRg2t0TPoKhytDhqXdwrg=s160-c-k-c0x00ffffff-no-rj" alt="pfp" class="discord-icon">
-                <h3>Lejo</h3>
+            <div class="discord-widget">
+                <div class="widget-header">
+                    <img src="https://yt3.googleusercontent.com/P2hEhef03_6x3ZWeRYm8w7SN5dvn9sKD8YZdZptb3Pnc9BU6_yR5mYDRg2t0TPoKhytDhqXdwrg=s160-c-k-c0x00ffffff-no-rj" alt="pfp" class="discord-icon">
+                    <h3>Lejo</h3>
+                </div>
+                <p>Discord Profile: <a href="https://discord.com/users/778680432777887755" target="_blank">Visit Profile</a></p>
+                <p>YouTube Channel: <a href="https://www.youtube.com/@Lejo.s_World" target="_blank">Lejo's World</a></p>
             </div>
-            <p>Discord Profile: <a href="https://discord.com/users/778680432777887755" target="_blank">Visit Profile</a></p>
-            <p>YouTube Channel: <a href="https://www.youtube.com/@Lejo.s_World" target="_blank">Lejo's World</a></p>
-        </div>
-        <div class="discord-widget">
-            <div class="widget-header">
-                <img src="https://cdn.discordapp.com/avatars/913798931949965362/431425b2e5c3e2b42b061924ffd90004.webp" alt="pfp" class="discord-icon">
-                <h3>MeowCat</h3>
+            <div class="discord-widget">
+                <div class="widget-header">
+                    <img src="https://cdn.discordapp.com/avatars/913798931949965362/431425b2e5c3e2b42b061924ffd90004.webp" alt="pfp" class="discord-icon">
+                    <h3>MeowCat</h3>
+                </div>
+                <p>Discord Profile: <a href="https://discord.com/users/913798931949965362" target="_blank">Visit Profile</a></p>
+                <p>Website: <a href="https://meowcat.ct.ws" target="_blank">https://meowcat.ct.ws</a></p>
             </div>
-            <p>Discord Profile: <a href="https://discord.com/users/913798931949965362" target="_blank">Visit Profile</a></p>
-            <p>Website: <a href="https://meowcat.ct.ws" target="_blank">https://meowcat.ct.ws</a></p>
-        </div>
-        <div class="discord-widget">
-            <div class="widget-header">
-                <img src="https://m.media-amazon.com/images/S/aplus-media-library-service-media/468b83d2-8307-4671-ad98-a555817be1ed.__CR0,0,800,600_PT0_SX800_V1___.png" alt="pfp" class="discord-icon">
-                <h3>Vinnie!!</h3>
+            <div class="discord-widget">
+                <div class="widget-header">
+                    <img src="https://m.media-amazon.com/images/S/aplus-media-library-service-media/468b83d2-8307-4671-ad98-a555817be1ed.__CR0,0,800,600_PT0_SX800_V1___.png" alt="pfp" class="discord-icon">
+                    <h3>Vinnie!!</h3>
+                </div>
+                <p>Discord Profile: <a href="https://discord.com/users/1060276058508759070" target="_blank">Visit Profile</a></p>
             </div>
-            <p>Discord Profile: <a href="https://discord.com/users/1060276058508759070" target="_blank">Visit Profile</a></p>
-        </div>
         </div>
         <p>This website is still under construction, since I want to finish it after I learn everything in Full Stack Web Development.</p>
+        <p style="text-decoration: underline;" id="legalese">Legalese</p>
+
+        <!-- Popup -->
+        <div id="legalPopup" class="popup">
+            <div class="popup-content">
+                <span class="close">&times;</span>
+                <div style="color: black;" id="popupContent">
+                  <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://quantumdev.cc">https://quantumdev.cc</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://quantum.is-a.dev">QuantumDev</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC-ND 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nd.svg?ref=chooser-v1" alt=""></a></p>
+                  <a href="//www.dmca.com/Protection/Status.aspx?ID=865db689-5e03-4704-9d26-fa1c0da5f0be" title="DMCA.com Protection Status" class="dmca-badge"> <img src ="https://images.dmca.com/Badges/dmca-badge-w100-5x1-10.png?ID=865db689-5e03-4704-9d26-fa1c0da5f0be"  alt="DMCA.com Protection Status" /></a>  <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"> </script>
+               <p> Made with ♥︎ by Quantum </p>
+                </div>
+            </div>
+        </div>
+        
+        <script>
+            // Get the modal
+            var modal = document.getElementById("legalPopup");
+        
+            // Get the button that opens the modal
+            var legalese = document.getElementById("legalese");
+        
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[0];
+        
+            // When the user clicks the "Legalese" paragraph, open the modal
+            legalese.onclick = function() {
+                modal.style.display = "block";
+            }
+        
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() {
+                modal.style.display = "none";
+            }
+        
+            // When the user clicks anywhere outside the modal, close it
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        
+        </script>
+        
+        <style>
+            /* The Modal (background) */
+            .popup {
+                display: none; 
+                position: fixed; 
+                z-index: 1; 
+                left: 0;
+                top: 0;
+                width: 100%; 
+                height: 100%; 
+                overflow: auto; 
+                background-color: rgb(0,0,0); 
+                background-color: rgba(0,0,0,0.4); 
+            }
+        
+            /* Modal Content */
+            .popup-content {
+                background-color: #fefefe;
+                margin: 15% auto;
+                padding: 20px;
+                border: 1px solid #888;
+                width: 80%;
+                max-width: 600px;
+                border-radius: 10px;
+            }
+        
+            /* The Close Button */
+            .close {
+                color: #aaa;
+                float: right;
+                font-size: 28px;
+                font-weight: bold;
+            }
+        
+            .close:hover,
+            .close:focus {
+                color: black;
+                text-decoration: none;
+                cursor: pointer;
+            }
+        </style>
+    </div>
         
     <script>
         particlesJS("particles-js", {
@@ -122,18 +243,14 @@
                 "shape": {
                     "type": "circle",
                     "stroke": {"width": 0, "color": "#000000"},
-                    "polygon": {"nb_sides": 5},
-                    "image": {"src": "", "width": 100, "height": 100}
+                    "polygon": {"nb_sides": 5}
                 },
                 "opacity": {
-                    "value": 0.5,
-                    "random": false,
-                    "anim": {"enable": false, "speed": 1, "opacity_min": 0.1, "sync": false}
+                    "value": 0.5
                 },
                 "size": {
                     "value": 3,
-                    "random": true,
-                    "anim": {"enable": false, "speed": 40, "size_min": 0.1, "sync": false}
+                    "random": true
                 },
                 "line_linked": {
                     "enable": true,
@@ -146,114 +263,23 @@
                     "enable": true,
                     "speed": 6,
                     "direction": "none",
-                    "random": false,
-                    "straight": false,
-                    "out_mode": "out",
-                    "bounce": false,
-                    "attract": {"enable": false, "rotateX": 600, "rotateY": 1200}
+                    "random": false
                 }
             },
             "interactivity": {
                 "detect_on": "canvas",
                 "events": {
                     "onhover": {"enable": true, "mode": "repulse"},
-                    "onclick": {"enable": true, "mode": "push"},
-                    "resize": true
+                    "onclick": {"enable": true, "mode": "push"}
                 },
                 "modes": {
-                    "grab": {"distance": 400, "line_linked": {"opacity": 1}},
-                    "bubble": {"distance": 400, "size": 40, "duration": 2, "opacity": 8, "speed": 3},
                     "repulse": {"distance": 200, "duration": 0.4},
-                    "push": {"particles_nb": 4},
-                    "remove": {"particles_nb": 2}
+                    "push": {"particles_nb": 4}
                 }
             },
             "retina_detect": true
         });
     </script>
-      <p style="text-decoration: underline;" id="legalese">Legalese</p>
-
-<!-- Popup -->
-<div id="legalPopup" class="popup">
-    <div class="popup-content">
-        <span class="close">&times;</span>
-        <div style="color: black;" id="popupContent">
-          <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://quantumdev.cc">https://quantumdev.cc</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://quantum.is-a.dev">QuantumDev</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC-ND 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nd.svg?ref=chooser-v1" alt=""></a></p>
-          <a href="//www.dmca.com/Protection/Status.aspx?ID=865db689-5e03-4704-9d26-fa1c0da5f0be" title="DMCA.com Protection Status" class="dmca-badge"> <img src ="https://images.dmca.com/Badges/dmca-badge-w100-5x1-10.png?ID=865db689-5e03-4704-9d26-fa1c0da5f0be"  alt="DMCA.com Protection Status" /></a>  <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"> </script>
-       <p> Made with ♥︎ by Quantum </p>
-        </div>
-    </div>
-</div>
-
-<script>
-    // Get the modal
-    var modal = document.getElementById("legalPopup");
-
-    // Get the button that opens the modal
-    var legalese = document.getElementById("legalese");
-
-    // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName("close")[0];
-
-    // When the user clicks the "Legalese" paragraph, open the modal
-    legalese.onclick = function() {
-        modal.style.display = "block";
-    }
-
-    // When the user clicks on <span> (x), close the modal
-    span.onclick = function() {
-        modal.style.display = "none";
-    }
-
-    // When the user clicks anywhere outside the modal, close it
-    window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
-    }
-
-</script>
-
-<style>
-    /* The Modal (background) */
-    .popup {
-        display: none; 
-        position: fixed; 
-        z-index: 1; 
-        left: 0;
-        top: 0;
-        width: 100%; 
-        height: 100%; 
-        overflow: auto; 
-        background-color: rgb(0,0,0); 
-        background-color: rgba(0,0,0,0.4); 
-    }
-
-    /* Modal Content */
-    .popup-content {
-        background-color: #fefefe;
-        margin: 15% auto;
-        padding: 20px;
-        border: 1px solid #888;
-        width: 80%;
-        max-width: 600px;
-        border-radius: 10px;
-    }
-
-    /* The Close Button */
-    .close {
-        color: #aaa;
-        float: right;
-        font-size: 28px;
-        font-weight: bold;
-    }
-
-    .close:hover,
-    .close:focus {
-        color: black;
-        text-decoration: none;
-        cursor: pointer;
-    }
-</style>
+    
 </body>
 </html>
