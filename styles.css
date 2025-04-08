@@ -207,3 +207,61 @@ body.light-mode .container {
     border-color: #777;
     cursor: not-allowed;
 }
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .rotating-text-container {
+        font-size: 20px;
+    }
+    .icons img {
+        width: 40px;
+        height: 40px;
+    }
+    .discord-widget {
+        padding: 8px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+    .rotating-text-container {
+        font-size: 18px;
+    }
+    .icons img {
+        width: 35px;
+        height: 35px;
+    }
+    .discord-widget {
+        padding: 6px;
+    }
+    #discord img {
+        max-width: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 12px;
+    }
+    header {
+        margin-top: 10px;
+    }
+    .rotating-text-container {
+        font-size: 16px;
+    }
+    .icons img {
+        width: 30px;
+        height: 30px;
+    }
+    .discord-widget {
+        padding: 5px;
+    }
+    #discord img {
+        max-width: 150px;
+    }
+    .popup-content {
+        width: 90%;
+        padding: 15px;
+    }
+}
