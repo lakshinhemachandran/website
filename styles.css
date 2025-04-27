@@ -3,265 +3,108 @@ body {
     color: white;
     font-family: 'Fira Code', monospace;
     margin: 0;
-    overflow: true;
 }
-#particles-js {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-}
-.container {
+
+.navbar {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    text-align: center;
     padding: 20px;
-    margin: 50px;
-    background-color: rgba(40, 40, 40, 0.9);
-    border-radius: 10px;
-    border: 1px solid white;
+    background-color: #333;
 }
-.icons {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-}
-.discord-widget {
-    background-color: #2f3136;
-    border: 2px solid #7289da;
-    border-radius: 10px;
-    padding: 20px;
-    max-width: 300px;
-    margin: 20px auto;
-}
-.widget-header {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-.discord-icon {
-    width: 30px;
-    height: 30px;
-}
-a {
-    color: #7289da;
+
+.navbar-brand {
+    color: #fff;
     text-decoration: none;
-}
-a:hover {
-    text-decoration: underline;
-}
-  
-.icons img {
-    filter: brightness(0) invert(1); 
-  }
-  ::selection {
-    background: #04D9FF;
-    color: white;
-  }
-
-  .rotating-text-container {
-    display: inline-block;
-    overflow: hidden;
-    border-right: 3px solid white;
-    padding-right: 10px;
-  }
-  
-  .rotating-text {
-    font-size: 2rem;
+    font-size: 24px;
     font-weight: bold;
-    text-align: center;
-    display: inline-block;
-    white-space: nowrap;
-    overflow: hidden;
-  }
-  
-  @media (max-width: 768px) {
-    .rotating-text {
-      font-size: 1.5rem;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .rotating-text {
-      font-size: 1.2rem;
-    }
-  }
-  #discord {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-  }
-  
-  #lanyard-img {
-    max-width: 100%;
-    height: auto;
-    width: 100%;
-    max-width: 250px; /* Set a max size */
-  }
-  
-  /* For smaller devices like phones */
-  @media (max-width: 768px) {
-    #lanyard-img {
-      max-width: 200px;
-    }
-  }
-  
-  /* For even smaller devices */
-  @media (max-width: 480px) {
-    #lanyard-img {
-      max-width: 150px;
-    }
-  }
-  h1, h3 {
-    font-weight: bold;
-    letter-spacing: 1px;
-}
-p {
-    letter-spacing: 0.5px;
-}
-a:hover::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    background-color: #04D9FF;
-    bottom: 0;
-    left: 0;
-    animation: linkHover 0.3s ease-in-out;
 }
 
-@keyframes linkHover {
-    0% {
-        transform: scaleX(0);
-        transform-origin: bottom right;
-    }
-    100% {
-        transform: scaleX(1);
-        transform-origin: bottom left;
-    }
-}
-html {
-    scroll-behavior: smooth;
-    cursor: url('path/to/your/custom/cursor.png'), auto;
-}
-body.light-mode {
-    background-color: #f9f9f9;
-    color: black;
-}
-body.light-mode .container {
-    background-color: rgba(255, 255, 255, 0.9);
-    border: 1px solid #ccc;
-}
-/* General button styling */
-.button {
-    background-color: #7289da; /* Discord-like blue */
-    color: white;
-    border: 2px solid transparent;
-    padding: 12px 24px;
-    font-size: 16px;
-    font-weight: bold;
-    border-radius: 8px;
+.navbar-toggler {
+    display: none; /* Hidden by default, only shown on mobile */
     cursor: pointer;
-    transition: all 0.3s ease;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    display: inline-block;
-    text-align: center;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 21px;
+    background: transparent;
+    border: none;
+    padding: 0;
+    z-index: 1;
 }
 
-/* Button hover effect */
-.button:hover {
-    background-color: #4f5b99; /* Darker blue */
-    border-color: #ffffff;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+.navbar-toggler .bar {
+    background-color: white;
+    height: 3px;
+    width: 30px;
+    transition: transform 0.3s ease;
 }
 
-/* Button active effect (when clicked) */
-.button:active {
-    background-color: #2a2f6f; /* Even darker blue */
-    transform: scale(0.98);
+.navbar-toggler .bar1.active {
+    transform: rotate(45deg) translate(5px, 5px);
 }
 
-/* Button focus effect (when the button is focused) */
-.button:focus {
-    outline: none;
-    box-shadow: 0 0 10px rgba(114, 137, 218, 0.6);
+.navbar-toggler .bar2.active {
+    opacity: 0;
 }
 
-/* Optional: Gradient button (for a more dynamic look) */
-.button-gradient {
-    background: linear-gradient(45deg, #7289da, #00b0f4);
-    color: white;
-    border: 2px solid transparent;
+.navbar-toggler .bar3.active {
+    transform: rotate(-45deg) translate(5px, -5px);
 }
 
-.button-gradient:hover {
-    background: linear-gradient(45deg, #4f5b99, #0098d8);
+.navbar-links {
+    display: flex;
+    justify-content: flex-end;
+    flex-grow: 1;
 }
 
-/* Disabled button */
-.button:disabled {
-    background-color: #555;
-    border-color: #777;
-    cursor: not-allowed;
+.nav-item {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
 }
-/* Responsive Styles */
-@media (max-width: 1200px) {
-    .rotating-text-container {
-        font-size: 20px;
-    }
-    .icons img {
-        width: 40px;
-        height: 40px;
-    }
-    .discord-widget {
-        padding: 8px;
-    }
+
+.nav-item:hover {
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 @media (max-width: 768px) {
-    body {
-        font-size: 14px;
+    /* Mobile View - Hamburger Menu Visible */
+    .navbar-toggler {
+        display: flex;
     }
-    .rotating-text-container {
-        font-size: 18px;
+
+    /* Hide navbar links initially on mobile */
+    .navbar-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        background-color: #333;
+        padding-top: 20px;
     }
-    .icons img {
-        width: 35px;
-        height: 35px;
+
+    /* Show navbar links when hamburger menu is active */
+    .navbar-links.active {
+        display: flex;
     }
-    .discord-widget {
-        padding: 6px;
-    }
-    #discord img {
-        max-width: 200px;
+
+    /* Adjust margin for nav items on mobile */
+    .nav-item {
+        margin: 10px 0;
     }
 }
 
-@media (max-width: 480px) {
-    body {
-        font-size: 12px;
+@media (min-width: 768px) {
+    /* Desktop View - Hide Hamburger and Show Links Horizontally */
+    .navbar-toggler {
+        display: none;
     }
-    header {
-        margin-top: 10px;
-    }
-    .rotating-text-container {
-        font-size: 16px;
-    }
-    .icons img {
-        width: 30px;
-        height: 30px;
-    }
-    .discord-widget {
-        padding: 5px;
-    }
-    #discord img {
-        max-width: 150px;
-    }
-    .popup-content {
-        width: 90%;
-        padding: 15px;
+
+    .navbar-links {
+        display: flex;
+        justify-content: flex-end;
     }
 }
