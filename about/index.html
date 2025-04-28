@@ -41,29 +41,153 @@
         }
     </script>
     <style>
-        .current {
-            color: orange;
-        }
+/* Grid Layout for About Section */
+.about-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Ensures the heading and paragraph appear in full width and above progress bars */
+.about-section h1, .about-section p {
+    text-align: center;
+    grid-column: span 1;
+}
+
+/* Progress Bar Container */
+.progress-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* Individual Progress Bar */
+.progress-bar {
+    position: relative;
+    height: 20px;
+    border-radius: 10px;
+    background-color: #f3f3f3;
+}
+
+.progress-bar div {
+    position: absolute;
+    height: 100%;
+    border-radius: 10px;
+}
+
+/* Labels for Progress Bars */
+.progress-label {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+/* Udemy Progress Bar Styling */
+.udemy-progress {
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    height: 20px;
+    width: 100%;
+}
+
+.udemy-progress div {
+    background-color: #4CAF50;
+    border-radius: 10px;
+    height: 100%;
+}
+
+/* Responsive Design for Larger Screens */
+@media (min-width: 600px) {
+    .about-section {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .about-section h1, .about-section p {
+        grid-column: span 2; /* Centering text across the grid */
+    }
+}
+
+@media (min-width: 1024px) {
+    .about-section {
+        grid-template-columns: 1fr 2fr; /* More spacious layout for larger screens */
+    }
+}
+
     </style>
 </head>
 <body>
     <div class="container">
         <header>
             <nav class="navbar">
-                <a class="navbar-brand" href="/">Home</a>
                 <button class="navbar-toggler" onclick="toggleNavbar()">
                     <div class="bar bar1"></div>
                     <div class="bar bar2"></div>
                     <div class="bar bar3"></div>
                 </button>
                 <div class="navbar-links" id="navbar-links">
+                    <a class="nav-item home-link" href="/">Home</a>
                     <a class="nav-item" href="/projects/">Projects</a>
                     <a class="nav-item" href="/blog/">Blog</a>
-                    <a class="nav-item current" href="/about/">About</a>
+                    <a class="nav-item" href="/about/">About</a>
                 </div>
             </nav>
+            
         </header>
-        <h1 style="text-align: center;">Coming Soon</h1>
+
+        <section class="about-section">
+            <h1>About Me</h1>
+            <p> I am a passionate middle school developer from India based in the U.S. with love for tech since 2nd Grade! I love developing, and hope to become the best developer the world has ever seen! </p> 
+            
+            <div class="progress-container">
+                <div>
+                    <div class="progress-label">
+                        <span>HTML</span>
+                        <span>95%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div style="width: 95%; background-color: #4CAF50;"></div>
+                    </div>
+                </div>
+                <div>
+                    <div class="progress-label">
+                        <span>CSS</span>
+                        <span>89%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div style="width: 89%; background-color: #2196F3;"></div>
+                    </div>
+                </div>
+                <div>
+                    <div class="progress-label">
+                        <span>GitHub</span>
+                        <span>92%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div style="width: 92%; background-color: #333;"></div>
+                    </div>
+                </div>
+                <div>
+                    <div class="progress-label">
+                        <span>VSCode</span>
+                        <span>97%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div style="width: 97%; background-color: #0078d4;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h2>Udemy Progress</h2>
+                <div class="udemy-progress">
+                    <div style="width: 17%;"></div>
+                </div>
+                <p>Currently 17% done with <a href="https://www.udemy.com/course/the-complete-web-development-bootcamp/" target="_blank">Complete Web Development Bootcamp</a> on Udemy!</p>
+            </div>
+        </section>
 
     </div>
     
@@ -76,7 +200,5 @@
             bars.forEach(bar => bar.classList.toggle('active'));
         }
     </script>
-    
-    
 </body>
 </html>

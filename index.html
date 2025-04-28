@@ -52,18 +52,19 @@
     <div class="container">
         <header>
             <nav class="navbar">
-                <a class="navbar-brand current" href="/">Home</a>
                 <button class="navbar-toggler" onclick="toggleNavbar()">
                     <div class="bar bar1"></div>
                     <div class="bar bar2"></div>
                     <div class="bar bar3"></div>
                 </button>
                 <div class="navbar-links" id="navbar-links">
+                    <a class="nav-item home-link" href="/">Home</a>
                     <a class="nav-item" href="/projects/">Projects</a>
                     <a class="nav-item" href="/blog/">Blog</a>
                     <a class="nav-item" href="/about/">About</a>
                 </div>
             </nav>
+            
         </header>
         <div id="up">
             <img id="mainimg" src="images/quantum.png">
@@ -83,13 +84,19 @@
     </div>
     
     <script>
-        function toggleNavbar() {
-            const navbarLinks = document.getElementById('navbar-links');
-            navbarLinks.classList.toggle('active');
-            
-            const bars = document.querySelectorAll('.bar');
-            bars.forEach(bar => bar.classList.toggle('active'));
-        }
+function toggleNavbar() {
+    const navbarLinks = document.getElementById('navbar-links');
+    navbarLinks.classList.toggle('active');
+    
+    const bars = document.querySelectorAll('.bar');
+    bars.forEach(bar => bar.classList.toggle('active'));
+
+    // Move the hamburger (X) to the correct position
+    const navbarToggler = document.querySelector('.navbar-toggler');
+    navbarToggler.classList.toggle('active');
+}
+
+
     </script>
     
     

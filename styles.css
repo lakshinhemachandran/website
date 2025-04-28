@@ -3,6 +3,7 @@ body {
     color: white;
     font-family: 'Fira Code', monospace;
     margin: 0;
+}
 
 .navbar {
     display: flex;
@@ -12,15 +13,8 @@ body {
     background-color: #333;
 }
 
-.navbar-brand {
-    color: #fff;
-    text-decoration: none;
-    font-size: 24px;
-    font-weight: bold;
-}
-
 .navbar-toggler {
-    display: none; /* Hidden by default, only shown on mobile */
+    display: none;
     cursor: pointer;
     flex-direction: column;
     justify-content: space-around;
@@ -90,14 +84,23 @@ body {
         display: flex;
     }
 
-    /* Adjust margin for nav items on mobile */
+    /* Move the hamburger (X) to the top when active */
+    .navbar-toggler.active {
+        order: -1; /* Move hamburger icon to the top of the links */
+    }
+
+    /* The Home link joins the list */
+    .nav-item.home-link {
+        order: 1;
+        margin-top: 0;
+    }
+
     .nav-item {
         margin: 10px 0;
     }
 }
 
 @media (min-width: 768px) {
-    /* Desktop View - Hide Hamburger and Show Links Horizontally */
     .navbar-toggler {
         display: none;
     }
@@ -107,20 +110,23 @@ body {
         justify-content: flex-end;
     }
 }
+
 .container {
     display: flex;
     flex-direction: column;
     text-align: center;
     justify-content: center;
-    
+}
 
-}
-}
 #mainimg {
     height: 100px;
     width: 100px;
-
 }
+
 #up {
     margin-top: 50px;
+}
+
+a {
+    color: orange;
 }
