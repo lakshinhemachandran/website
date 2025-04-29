@@ -24,3 +24,5 @@ And that was when I realized, I wanted to do web development. For a while, I jus
 And that is basically my journey! Not really finished, since I can do WAYYYY more things in the future.
 
 So hopefully, I will become an awesome dev!
+
+Please like below!
