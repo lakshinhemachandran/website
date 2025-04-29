@@ -1,10 +1,10 @@
 [
-    {
-      "title": "First Post",
-      "tags": ["Quantum"],
-      "description": "This is my first blog post!",
-      "date": "28 Apr 2025",
-      "slug": "first-post"
-    }
+  {
+    "title": "My Development Journey",
+    "tags": ["Quantum", "Development", "Learning"],
+    "description": "How I became a developer in 5th Grade.",
+    "date": "29 Apr 2025",
+    "slug": "apr-29-2025-journey"
+  }
   ]
   
