@@ -25,4 +25,3 @@ And that is basically my journey! Not really finished, since I can do WAYYYY mor
 
 So hopefully, I will become an awesome dev!
 
-Please like below!
