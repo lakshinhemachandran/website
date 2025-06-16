@@ -21,6 +21,7 @@
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-bold-rounded/css/uicons-bold-rounded.css'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <meta name="google-site-verification" content="UyjsTvpgxuaGltdxi_H2cDy9SHun9c7L5g9tPnoMs9k" />
+    
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
@@ -95,7 +96,77 @@ function toggleNavbar() {
 
 
     </script>
-    
-    
+    <footer>
+      <!-- Trigger link -->
+  <a href="#" id="legalese-link">Legalese</a>
+    </footer>
+  <!-- Popup -->
+  <div class="popup" id="legalese-popup">
+    <div class="popup-content">
+      <!-- 🔒 DMCA Badge -->
+      <a href="//www.dmca.com/Protection/Status.aspx?ID=865db689-5e03-4704-9d26-fa1c0da5f0be"
+         title="DMCA.com Protection Status"
+         onclick="window.open(this.href, 'popupwindow', 'width=800,height=600,scrollbars,resizable'); return false;">
+        <img src="https://images.dmca.com/Badges/dmca_protected_sml_120t.png?ID=865db689-5e03-4704-9d26-fa1c0da5f0be"
+             alt="DMCA.com Protection Status" class="h-6" />
+      </a>
+
+      <!-- ❤️ Developed with Love by Quantum -->
+      <div class="footer-text">
+        <span>Developed with</span>
+        <span style="color: #f472b6;">Love</span>
+        <span>by <strong style="color: white;">Quantum</strong></span>
+      </div>
+
+      <!-- 🧠 Creative Commons License -->
+      <div class="cc-license">
+        <a href="https://quantumdev.cc" class="footer-link">
+          quantumdev.cc
+        </a> by 
+        <a href="https://quantumdev.cc" class="footer-link">
+          Lakshin Hemachandran
+        </a> is licensed under 
+        <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/?ref=chooser-v1"
+           target="_blank"
+           rel="license noopener noreferrer"
+           class="footer-link">
+          CC BY-NC-ND 4.0
+          <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt="">
+          <img src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt="">
+          <img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt="">
+          <img src="https://mirrors.creativecommons.org/presskit/icons/nd.svg?ref=chooser-v1" alt="">
+        </a>
+      </div>
+
+      <!-- Close Button -->
+      <button class="popup-close" id="popup-close-btn">&times;</button>
+    </div>
+  </div>
+
+  <script>
+    // Get the elements
+    const legaleseLink = document.getElementById('legalese-link');
+    const popup = document.getElementById('legalese-popup');
+    const closeBtn = document.getElementById('popup-close-btn');
+
+    // Show the popup when "Legalese" is clicked
+    legaleseLink.addEventListener('click', function(e) {
+      e.preventDefault();
+      popup.style.display = 'flex';
+    });
+
+    // Close the popup when the close button is clicked
+    closeBtn.addEventListener('click', function() {
+      popup.style.display = 'none';
+    });
+
+    // Close the popup when clicking outside of the popup content
+    window.addEventListener('click', function(e) {
+      if (e.target === popup) {
+        popup.style.display = 'none';
+      }
+    });
+  </script>
+      
 </body>
 </html>

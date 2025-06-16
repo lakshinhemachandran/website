@@ -1,5 +1,12 @@
 [
   {
+    "title": "What is DNS?",
+    "tags": ["HTML", "Learning", "Development"],
+    "description": "Learn all about DNS in just 10 minutes!",
+    "date": "30 Apr 2025",
+    "slug": "apr-30-2025-what-is-dns"
+  },
+  {
     "title": "My Development Journey",
     "tags": ["Quantum", "Development", "Learning"],
     "description": "How I became a developer in 5th Grade.",
