@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <title>QuantumDev</title>
-    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/png" href="images/quantum.png">
     <meta name="description" content="Hi there! I'm QuantumDev, a teenage developer who is currently learning Full Stack Development.">
     <meta property="og:title" content="QuantumDev">
@@ -18,7 +18,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
     <script src="https://kit.fontawesome.com/62832d42d1.js" crossorigin="anonymous"></script>
-    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-bold-rounded/css/uicons-bold-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <meta name="google-site-verification" content="UyjsTvpgxuaGltdxi_H2cDy9SHun9c7L5g9tPnoMs9k" />
     
@@ -45,77 +45,51 @@
     </script>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <nav class="navbar">
-                <button class="navbar-toggler" onclick="toggleNavbar()">
-                    <div class="bar bar1"></div>
-                    <div class="bar bar2"></div>
-                    <div class="bar bar3"></div>
-                </button>
-                <div class="navbar-links" id="navbar-links">
-                    <a class="nav-item home-link" href="/">Home</a>
-                    <a class="nav-item" href="/projects/">Projects</a>
-                    <a class="nav-item" href="/blog/">Blog</a>
-                    <a class="nav-item" href="/about/">About</a>
-                </div>
-            </nav>
+<div id="particles-js">
+    <div class="gridcontainer">
+        <div class="flex-left">
+            <img src="images/quantum.png" height="160px">
+            <h1 id="title"> QuantumDev </h1>
+            <p>Hello, my name is Lakshin! I'm a middle-school developer from India who is based in the US. I like to code, and play around with random technology. I am currently learning JavaScript, Editing in DaVinci Resolve, and Photography in Manual Mode. You can contact me via my Discord below! </p>
             
-        </header>
-        <div id="up">
-            <img id="mainimg" src="images/quantum.png">
-        </div>
-        <h1> QuantumDev </h1>
-        <p> Hello! I'm Lakshin, a.k.a QuantumDev by the many awesome people on the internet. I like to create things, especially with code! </p>
-        <div class="links">
-            <a href="https://discord.com/users/1348440369733439629/" target="_blank">
-                <i class="fab fa-discord" style="color: #5865F2; font-size: 48px;"></i>
+            <a href="https://discord.com/users/1348440369733439629/">
+                <i class="fa-brands fa-discord"></i>
             </a>
-            <a href="https://github.com/lakshinhemachandran" target="_blank">
-                <i class="fab fa-github" style="color: #f4f7fb; font-size: 48px;"></i>
+            <a href="https://github.com/lakshinhemachandran">
+                <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://youtube.com/@QuantumDevOfficial">
+                <i class="fa-brands fa-youtube"></i>
             </a>
         </div>
-           
-    <script>
-function toggleNavbar() {
-    const navbarLinks = document.getElementById('navbar-links');
-    navbarLinks.classList.toggle('active');
-    
-    const bars = document.querySelectorAll('.bar');
-    bars.forEach(bar => bar.classList.toggle('active'));
+        <div class="flex-right">
+            <fieldset class="skills">
+                <legend>Skills</legend>
+                <i class="fa-brands fa-html5"></i>
+                <i class="fa-brands fa-css3-alt"></i>
+                <i class="fa-brands fa-github"></i>
+                <i class="fa-solid fa-camera-retro"></i>
+                
 
-    // Move the hamburger (X) to the correct position
-    const navbarToggler = document.querySelector('.navbar-toggler');
-    navbarToggler.classList.toggle('active');
-}
-
-
-    </script>
-    <footer>
-  <script>
-    // Get the elements
-    const legaleseLink = document.getElementById('legalese-link');
-    const popup = document.getElementById('legalese-popup');
-    const closeBtn = document.getElementById('popup-close-btn');
-
-    // Show the popup when "Legalese" is clicked
-    legaleseLink.addEventListener('click', function(e) {
-      e.preventDefault();
-      popup.style.display = 'flex';
-    });
-
-    // Close the popup when the close button is clicked
-    closeBtn.addEventListener('click', function() {
-      popup.style.display = 'none';
-    });
-
-    // Close the popup when clicking outside of the popup content
-    window.addEventListener('click', function(e) {
-      if (e.target === popup) {
-        popup.style.display = 'none';
-      }
+                
+            </fieldset>
+            <fieldset>
+                <legend>Learning</legend>
+                <i class="fa-brands fa-js"></i>
+                <i class="fa-brands fa-python"></i>
+            </fieldset>
+            <fieldset>
+                <legend>Projects</legend>
+                <p id="bigger"> Starry Systems </p>
+                <p>Starry Systems is my "company" that I own with my friends. We create cool projects and then publish them! We are currently working on <b><a id="underline" href="https://mindflow.netlify.app">Mindflow</a></b>, a simple web application where you can take time to focus and reflect on yourself.</p>
+            </fieldset>
+        </div>
+    </div>
+</div>
+<script>
+    particlesJS.load('particles-js', 'particles.json', function() {
     });
   </script>
-      
+  
 </body>
 </html>

@@ -6,21 +6,6 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://quantumdev.cc/about/</loc>
-    <lastmod>2025-04-28</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://quantumdev.cc/blog/</loc>
-    <lastmod>2025-04-28</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://quantumdev.cc/projects/</loc>
-    <lastmod>2025-04-28</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://quantumdev.cc/images/quantum.png</loc>
     <lastmod>2025-04-28</lastmod>
     <priority>0.5</priority>

@@ -1,215 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
 body {
-    background-color: rgb(31, 31, 31);
+    background-color: rgb(23, 23, 23);
+    font-family: 'Raleway', sans-serif;
     color: white;
-    font-family: 'Fira Code', monospace;
-    margin: 0;
+    margin: 30px 20px;
 }
 
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: #333;
+#title {
+    font-size: 36px;
+    margin-bottom: 20px;
 }
 
-.navbar-brand {
-    color: #fff;
+i {
+    color: white;
+    font-size: 60px;
+}
+
+.gridcontainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+@media (min-width: 1600px) {
+    body {
+        font-size: 2.5rem;
+        margin: 150px;
+    }
+
+    #title {
+        font-size: 100px;
+    }
+
+    i {
+        font-size: 90px;
+    }
+
+    .gridcontainer {
+        grid-template-columns: 3fr 7fr;
+        gap: 80px;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1599px) {
+    body {
+        margin: 80px 50px;
+        font-size: 1.5rem;
+    }
+
+    #title {
+        font-size: 70px;
+    }
+
+    i {
+        font-size: 80px;
+    }
+
+    .gridcontainer {
+        grid-template-columns: 3fr 7fr;
+        gap: 60px;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 1199px) {
+    body {
+        margin: 50px 30px;
+        font-size: 1.2rem;
+    }
+
+    #title {
+        font-size: 50px;
+    }
+
+    i {
+        font-size: 70px;
+    }
+
+    .gridcontainer {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}
+
+@media (max-width: 599px) {
+    body {
+        margin: 20px 15px;
+        font-size: 1rem;
+    }
+
+    #title {
+        font-size: 32px;
+    }
+
+    i {
+        font-size: 50px;
+    }
+
+    .gridcontainer {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
+#bigger {
+    font-size: 50px;
+}
+
+#underline {
+    color: white;
     text-decoration: none;
-    font-size: 24px;
-    font-weight: bold;
-    margin-right: auto;
-    transition: all 0.3s ease;
 }
 
-.navbar-toggler {
-    display: none;
-    cursor: pointer;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 30px;
-    height: 21px;
-    background: transparent;
-    border: none;
-    padding: 0;
-    z-index: 1;
-    margin-left: 20px;
-}
-
-.navbar-toggler .bar {
-    background-color: white;
-    height: 3px;
-    width: 30px;
-    transition: transform 0.3s ease;
-}
-
-.navbar-toggler .bar1.active {
-    transform: rotate(45deg) translate(5px, 5px);
-}
-
-.navbar-toggler .bar2.active {
-    opacity: 0;
-}
-
-.navbar-toggler .bar3.active {
-    transform: rotate(-45deg) translate(5px, -5px);
-}
-
-.navbar-links {
-    display: flex;
-    justify-content: flex-end;
-    flex-grow: 1;
-}
-
-.nav-item {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 15px;
-    font-size: 18px;
-}
-
-.nav-item:hover {
+#underline:hover {
     text-decoration: underline;
-    cursor: pointer;
 }
-
-@media (max-width: 768px) {
-    /* Mobile View - Hamburger Menu Visible */
-    .navbar-toggler {
-        display: flex;
-    }
-
-    /* Hide navbar links initially on mobile */
-    .navbar-links {
-        display: none;
-        width: 100%;
-        flex-direction: column;
-        align-items: center;
-        background-color: #333;
-        padding-top: 20px;
-    }
-
-    /* Show navbar links when hamburger menu is active */
-    .navbar-links.active {
-        display: flex;
-    }
-
-    /* Make the Home link join the hamburger menu */
-    .navbar-brand.active {
-        order: 1;
-        margin-right: 0;
-        margin-bottom: 10px;
-    }
-
-    .nav-item {
-        margin: 10px 0;
-    }
-}
-
-@media (min-width: 768px) {
-    .navbar-toggler {
-        display: none;
-    }
-
-    .navbar-links {
-        display: flex;
-        justify-content: flex-end;
-    }
-}
-
-.container {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
-}
-
-#mainimg {
-    height: 100px;
-    width: 100px;
-}
-
-#up {
-    margin-top: 50px;
-}
-
 a {
-    color: orange;
+    text-decoration: none;
 }
- /* Popup Styles */
- .popup {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Dimmed background */
-    z-index: 100;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .popup-content {
-    background-color: #2a2d34;
-    color: #d1d5db;
-    padding: 20px;
-    border-radius: 8px;
-    width: 80%;
-    max-width: 600px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  }
-
-  .popup-content .footer-logo img {
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    animation: pulse 1s infinite;
-  }
-
-  /* Button to close the popup */
-  .popup-close {
-    color: #d1d5db;
-    background-color: transparent;
-    border: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-    margin-top: 16px;
-  }
-
-  /* Animation for pulse effect */
-  @keyframes pulse {
-    0% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(1.1);
-    }
-    100% {
-      transform: scale(1);
-    }
-  }
-
-  /* Footer Link Styling */
-  .footer-link {
-    color: #c4b5fd;
-    text-decoration: underline;
-    transition: color 0.3s ease;
-  }
-
-  .footer-link:hover {
-    color: #6366f1;
-  }
-  footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    
-    color: #d1d5db; /* Text color */
-    margin-bottom: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-  }
