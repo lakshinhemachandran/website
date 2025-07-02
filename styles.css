@@ -104,7 +104,7 @@ i {
         gap: 30px;
     }
 }
-#bigger {
+.bigger {
     font-size: 50px;
 }
 
