@@ -1,95 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>QuantumDev</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/png" href="images/quantum.png">
-    <meta name="description" content="Hi there! I'm QuantumDev, a teenage developer who is currently learning Full Stack Development.">
-    <meta property="og:title" content="QuantumDev">
-    <meta property="og:description" content="Hi there! I'm QuantumDev, a teenage developer who is currently learning Full Stack Development.">
-    <meta property="og:image" content="https://quantumdev.cc/images/quantum.png">
-    <meta property="og:url" content="https://quantumdev.cc">
-    <meta property="og:type" content="website">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="QuantumDev">
-    <meta name="twitter:description" content="Hi there! I'm QuantumDev, a teenage developer who is currently learning Full Stack Development.">
-    <meta name="twitter:image" content="https://quantumdev.cc/images/quantum.png">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
-    <script src="https://kit.fontawesome.com/62832d42d1.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <meta name="google-site-verification" content="UyjsTvpgxuaGltdxi_H2cDy9SHun9c7L5g9tPnoMs9k" />
-    
-    <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "Person",
-            "name": "QuantumDev",
-            "alternateName": "Lakshin Hemachandran",
-            "url": "https://quantumdev.cc",
-            "sameAs": [
-                "https://github.com/lakshinhemachandran",
-                "https://discord.com/users/1348440369733439629/"
-            ],
-            "jobTitle": "Full Stack Developer",
-            "worksFor": {
-                "@type": "Organization",
-                "name": "Self-Employed"
-            },
-            "knowsAbout": ["Full Stack Development", "Web Development"],
-            "image": "https://quantumdev.cc/images/quantum.png",
-            "logo": "https://quantumdev.cc/images/quantum.png"
-        }
-    </script>
+  <title>QuantumDev</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <meta name="description" content="Hi there! I'm QuantumDev, a teenage developer who is currently learning Full Stack Development." />
+
+  <!-- Open Graph & Twitter -->
+  <meta property="og:title" content="QuantumDev" />
+  <meta property="og:description" content="Hi there! I'm QuantumDev, a teenage developer who is currently learning Full Stack Development." />
+  <meta property="og:image" content="https://quantumdev.cc/images/quantum.png" />
+  <meta property="og:url" content="https://quantumdev.cc" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="QuantumDev" />
+  <meta name="twitter:description" content="Hi there! I'm QuantumDev, a teenage developer who is currently learning Full Stack Development." />
+  <meta name="twitter:image" content="https://quantumdev.cc/images/quantum.png" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/quantum.png" type="image/png" />
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  
+  <!-- FontAwesome -->
+  <script src="https://kit.fontawesome.com/62832d42d1.js" crossorigin="anonymous"></script>
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-<div class="container">
-<div id="particles-js">
-    <div class="gridcontainer">
-        <div class="flex-left">
-            <img src="images/quantum.png" height="160px">
-            <h1 id="title"> Lakshin Hemachandran </h1>
-            <p>Hello, my name is Lakshin! Some people may call me QuantumDev. I'm a middle-school developer from India who is based in the US. I like to code, and play around with random technology. I am currently learning Node.js, Editing in DaVinci Resolve, and Photography in Manual Mode. You can contact me via my Discord below! </p>
-            
-            <a href="https://discord.com/users/1348440369733439629/">
-                <i class="fa-brands fa-discord"></i>
-            </a>
-            <a href="https://github.com/lakshinhemachandran">
-                <i class="fa-brands fa-github"></i>
-            </a>
-            <a href="https://youtube.com/@lakshinhemachandran">
-                <i class="fa-brands fa-youtube"></i>
-            </a>
-        </div>
-        <div class="flex-right">
-            <fieldset class="skills">
-                <legend>Languages and Tools</legend>
-                <i class="fa-brands fa-html5"></i>
-                <i class="fa-brands fa-css3-alt"></i>
-                <i class="fa-brands fa-js"></i>
-                <i class="fa-brands fa-github"></i>
-                
 
-                
-            </fieldset>
-            <fieldset>
-                <legend>Learning</legend>
-                <i class="fa-brands fa-js"></i>
-                <i class="fa-brands fa-python"></i>
-            </fieldset>
-            <fieldset>
-                <legend>Projects</legend>
-                <p class="bigger"> Neuron Technologies </p>
-                <p>Neuron Technologies is a studio that I maintain with my friends where we create stuff with AI for everyone around the world to enjoy. We are currently creating a AI Image Creation Tool that is still in development and not available to the public yet.</p>
-            </fieldset>
-        </div>
+  <div class="navbar">
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#learning">What I'm Learning</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <section class="top" id="home">
+    <img src="images/image.jpg" alt="Lakshin's Profile Picture" />
+    <h1>👋 Hey, I'm Lakshin</h1>
+    <p>
+      I'm a passionate middle school developer from India, living in the US. I'm currently learning JavaScript and love turning ideas into impactful products.
+    </p>
+    <div>
+      <a href="#contact">
+        <button>Contact me here →</button>
+      </a>
+      <a href="https://discord.com/users/1348440369733439629/" target="_blank" rel="noopener" aria-label="Discord">
+        <i class="fa-brands fa-discord" aria-hidden="true"></i>
+      </a>
+      <a href="https://github.com/lakshinhemachandran" target="_blank" rel="noopener" aria-label="GitHub">
+        <i class="fa-brands fa-github" aria-hidden="true"></i>
+      </a>
+      <a href="https://youtube.com/@lakshinhemachandran" target="_blank" rel="noopener" aria-label="YouTube">
+        <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+      </a>
     </div>
-</div>
-</div>
-<script>
-    particlesJS.load('particles-js', 'particles.json', function() {
-    });
-  </script>
-  
+  </section>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      Hey! I'm Lakshin, a middle school developer passionate about turning ideas into reality using code. I build, learn, and grow every day as a dev.
+    </p>
+  </section>
+
+  <section id="projects">
+    <h2>My Projects</h2>
+    <div class="projects-container">
+      <div class="project-card">
+        <h3>Task Tracker App</h3>
+        <p>
+          I built this simple app with HTML, CSS, and vanilla JS to test my skills. It made me realize how much more I had to learn, and that’s what kickstarted my deep dive into JavaScript.
+        </p>
+        <a href="https://tasktracker.quantumdev.cc" target="_blank" rel="noopener">Demo</a>
+      </div>
+
+      <!-- Example: Add more projects here -->
+      <!--
+      <div class="project-card">
+        <h3>Another Project</h3>
+        <p>Description of the project goes here.</p>
+        <a href="#" target="_blank" rel="noopener">Demo</a>
+      </div>
+      -->
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>My Skills</h2>
+    <button>HTML</button>
+    <button>CSS</button>
+    <button>Vanilla JavaScript</button>
+  </section>
+
+  <section id="learning">
+    <h2>What I'm Learning</h2>
+    <p>
+      I'm currently learning JavaScript through a custom roadmap I created. Each unit has a mix of YouTube lessons and hands-on projects. I’m aiming to finish the full roadmap (including a final project) in 3–4 weeks.
+      You can see my roadmap
+      <a class="underline" href="https://www.notion.so/JavaScript-Roadmap-Checklist-23070ff66f80805b831afb1cb5b49248?source=copy_link" target="_blank" rel="noopener">here.</a>
+    </p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>
+      Reach out via email at <a href="mailto:hlakshin@gmail.com">hlakshin@gmail.com</a> or use the form below:
+    </p>
+
+    <form action="https://formsubmit.co/hlakshin@gmail.com" method="POST">
+      <input type="text" name="name" required placeholder="Your Name" />
+      <input type="email" name="email" required placeholder="Your Email" />
+      <textarea name="message" required placeholder="Your Message"></textarea>
+
+      <!-- Hidden settings -->
+      <input type="hidden" name="_captcha" value="false" />
+      <input type="hidden" name="_subject" value="New Contact Submission from Portfolio Site" />
+      <input type="hidden" name="_next" value="thanks.html" />
+      <input type="hidden" name="_autoresponse" value="Thanks for reaching out to Lakshin! I'll get back to you as soon as I can." />
+      <input type="hidden" name="_template" value="table" />
+      <input type="text" name="_honey" style="display:none" />
+
+      <button type="submit">
+        Submit
+        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style="opacity: 0.7;">
+          <path d="M476 3.2L12.5 270.6c-18.1 10.4-15.8 35.6 2.2 43.2L121 358.4l287.3-253.2c5.5-4.9 13.3 2.6 8.6 8.3L176 407v80.5c0 23.6 28.5 32.9 42.5 15.8L282 426l124.6 52.2c14.2 6 30.4-2.9 33-18.2l72-432C515 7.8 493.3-6.8 476 3.2z"></path>
+        </svg>
+      </button>
+    </form>
+  </section>
+
 </body>
 </html>
