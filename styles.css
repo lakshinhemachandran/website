@@ -136,7 +136,7 @@ button:hover {
 
 /* FontAwesome brand icons */
 .fa-brands {
-  color: #fff;
+  color: white;
   font-size: 2.2rem;
   margin: 0 0.6rem;
   transition: transform 0.2s ease, color 0.2s ease;
@@ -144,7 +144,7 @@ button:hover {
 
 .fa-brands:hover {
   transform: scale(1.2);
-  color: #5A67F2;
+  color: white;
 }
 
 /* CONTACT FORM */
@@ -246,12 +246,6 @@ form button[type="submit"] {
   img {
     height: 240px;
     width: 240px;
-  }
-
-  .fa-brands {
-    font-size: 2rem;
-    margin: 0 0.4rem;
-    color: white;
   }
 
   #projects .projects-container {
