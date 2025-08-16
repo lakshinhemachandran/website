@@ -43,7 +43,7 @@
       </ul>
     </nav>
   </div>
-
+              
   <section class="top" id="home">
     <img src="images/image.jpg" alt="Lakshin's Profile Picture" />
     <h1>👋 Hey, I'm Lakshin</h1>
@@ -136,6 +136,143 @@
       </button>
     </form>
   </section>
-
+  <!-- Full-Screen Confetti Birthday Popup -->
+<script type="module">
+  class BirthdayPopup extends HTMLElement {
+    static get observedAttributes(){ return ["open","name","age","from"]; }
+  
+    constructor(){
+      super();
+      this._onKeydown = this._onKeydown.bind(this);
+      this._close = this._close.bind(this);
+  
+      const shadow = this.attachShadow({mode:"open"});
+      shadow.innerHTML = `
+        <style>
+          :host { display:contents; }
+          .overlay {
+            position:fixed; inset:0;
+            background: rgba(0,0,0,0.6);
+            display:none; align-items:center; justify-content:center;
+            z-index:9999;
+          }
+          :host([open]) .overlay { display:flex; }
+          .dialog {
+            background:#fff; padding:24px 20px;
+            border-radius:16px; max-width:400px;
+            text-align:center; position:relative;
+            font-family: system-ui, sans-serif;
+            box-shadow:0 20px 60px rgba(0,0,0,.25);
+            z-index:10000;
+            animation: fadeIn 0.3s ease;
+          }
+          @keyframes fadeIn {
+            from {opacity:0; transform:scale(0.9);}
+            to {opacity:1; transform:scale(1);}
+          }
+          .close {
+            position:absolute; top:10px; right:10px;
+            background:none; border:0; font-size:24px; cursor:pointer;
+            z-index:10001;
+          }
+          .title { font-size:24px; margin:10px 0; color:#7c3aed; }
+          .msg { font-size:16px; color:#444; margin-bottom:10px; }
+          .confetti-container {
+            position:fixed; inset:0; pointer-events:none;
+            overflow:hidden; z-index:9998;
+          }
+          .bit {
+            position:absolute; width:12px; height:16px;
+            opacity:1; transform:translateY(-50px) rotate(0deg);
+            animation: fall linear forwards;
+            border-radius:2px;
+          }
+          @keyframes fall {
+            to { transform: translateY(110vh) rotate(360deg); opacity:0; }
+          }
+        </style>
+        <div class="overlay">
+          <div class="dialog" role="dialog" aria-modal="true">
+            <button class="close" aria-label="Close">&times;</button>
+            <h2 class="title"></h2>
+            <p class="msg"></p>
+          </div>
+        </div>
+        <div class="confetti-container"></div>
+      `;
+  
+      this._els = {
+        overlay: shadow.querySelector(".overlay"),
+        title: shadow.querySelector(".title"),
+        msg: shadow.querySelector(".msg"),
+        confettiContainer: shadow.querySelector(".confetti-container"),
+        closeBtn: shadow.querySelector(".close")
+      };
+  
+      this._confettiInterval = null;
+  
+      this._els.closeBtn.addEventListener("click", this._close);
+      this._els.overlay.addEventListener("click", e => {
+        if(e.target === this._els.overlay) this._close();
+      });
+    }
+  
+    connectedCallback(){ this._render(); if(this.hasAttribute("open")) this._attach(); }
+    attributeChangedCallback(name){ 
+      if(name==="open"){ 
+        this.hasAttribute("open") ? this._attach() : this._detach(); 
+      } else this._render(); 
+    }
+  
+    _render(){
+      const age = this.getAttribute("age")||"11";
+      const name = this.getAttribute("name")||"Livin Arul";
+      const from = this.getAttribute("from")||"Lakshin and Anirudh";
+      this._els.title.textContent = `Happy ${age}th Birthday ${name}!`;
+      this._els.msg.textContent = `From ${from}`;
+    }
+  
+    _attach(){
+      document.addEventListener("keydown", this._onKeydown);
+      this._startConfetti();
+    }
+  
+    _detach(){
+      document.removeEventListener("keydown", this._onKeydown);
+      this._stopConfetti();
+    }
+  
+    _onKeydown(e){ if(e.key==="Escape") this._close(); }
+  
+    _close(){
+      this.removeAttribute("open");
+    }
+  
+    _startConfetti(){
+      if(this._confettiInterval) return;
+      const colors = ["#e74c3c","#f1c40f","#2ecc71","#3498db","#9b59b6"];
+      this._confettiInterval = setInterval(()=>{
+        const bit = document.createElement("div");
+        bit.className = "bit";
+        bit.style.left = Math.random()*100+"vw";
+        bit.style.background = colors[Math.floor(Math.random()*colors.length)];
+        bit.style.animationDuration = (2+Math.random()*3)+"s";
+        this._els.confettiContainer.appendChild(bit);
+        setTimeout(()=> bit.remove(), 5000);
+      }, 100);
+    }
+  
+    _stopConfetti(){
+      clearInterval(this._confettiInterval);
+      this._confettiInterval = null;
+      this._els.confettiContainer.innerHTML = ""; // 💥 clear all bits when closed
+    }
+  }
+  customElements.define("birthday-popup", BirthdayPopup);
+  </script>
+  
+  <!-- Usage -->
+  <birthday-popup open name="Livin Arul" age="11" from="Lakshin and Anirudh"></birthday-popup>
+  
 </body>
 </html>
