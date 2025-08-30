@@ -11,7 +11,7 @@ export default function Home() {
             <div className="grid-container">
                 <div className="grid-item">
                     <img 
-                        src="https://quantumdev.cc/images/image.jpg" 
+                        src="https://quantum.is-a.dev/images/image.jpg" 
                         alt="Lakshin Hemachandran"
                         className="face-focused"
                     />
