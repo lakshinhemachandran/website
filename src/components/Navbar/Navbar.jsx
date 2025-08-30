@@ -4,6 +4,11 @@ import logo from '../../assets/logo.png';
 
 
 const Navbar = () => {
+  const navLinks = [
+    { to: '/', label: 'Home' },
+    { to: '/projects', label: 'Projects' },
+    { to: '/contact', label: 'Contact' }
+  ];
   return (
     <nav style={styles.nav}>
       <div style={styles.logo}>
@@ -11,9 +16,16 @@ const Navbar = () => {
       </div>
 
       <div style={styles.links}>
-        <Link style={styles.link} to="/">Home</Link>
-        <Link style={styles.link} to="/projects">Projects</Link>
-        <Link style={styles.link} to="/contact">Contact</Link>
+        {navLinks.map((link) => (
+          <Link
+            key={link.to}
+            to={link.to}
+            className="navbar-link"
+            style={styles.link}
+          >
+            {link.label}
+          </Link>
+        ))}
       </div>
     </nav>
   );
@@ -40,7 +52,8 @@ const styles = {
       textDecoration: "none",
       color: "white",
       fontWeight: "500",
-      fontSize: "16px"
+      fontSize: "16px",
+      position: "relative",
     }
   };
   
