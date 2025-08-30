@@ -274,3 +274,53 @@ h5 {
     padding: 2rem 1rem;
   }
 }
+
+.about-container {
+  max-width: 700px;
+  margin: 4rem auto;
+  background: #23272f;
+  border-radius: 18px;
+  box-shadow: 0 6px 32px rgba(0,0,0,0.12);
+  padding: 2.5rem 2rem;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.2rem;
+}
+.about-container h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.about-container p {
+  font-size: 1.1rem;
+  color: #cfd8dc;
+  margin-bottom: 1rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 2rem;
+  margin-top: 0.5rem;
+  justify-content: center;
+}
+.social-btn {
+  display: flex;
+  align-items: center;
+  font-size: 1.25rem;
+  color: #fff;
+  border-radius: 8px;
+  padding: 0.75em;
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: none;
+  transition: color 0.2s, transform 0.2s;
+  border: none;
+  background: none;
+}
+.social-btn:hover {
+  color: #ff0000;
+  transform: scale(1.15);
+  background: none;
+}

@@ -5,9 +5,10 @@ import logo from '../../assets/logo.png';
 
 const Navbar = () => {
   const navLinks = [
-    { to: '/', label: 'Home' },
-    { to: '/projects', label: 'Projects' },
-    { to: '/contact', label: 'Contact' }
+  { to: '/', label: 'Home' },
+  { to: '/projects', label: 'Projects' },
+  { to: '/about', label: 'About' },
+  { to: '/contact', label: 'Contact' }
   ];
   return (
     <nav style={styles.nav}>
