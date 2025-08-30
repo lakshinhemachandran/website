@@ -3,6 +3,7 @@ import Navbar from '../components/Navbar/Navbar'
 import "./Home.css"
 import { Link } from "react-router-dom";
 import { FaGithub, FaYoutube } from "react-icons/fa";
+import { Analytics } from "@vercel/analytics/next"
 
 export default function Home() {
     return (
