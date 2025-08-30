@@ -11,7 +11,6 @@ export default function Home() {
                     <img 
                         src="https://quantumdev.cc/images/image.jpg" 
                         alt="Lakshin Hemachandran"
-                        style={{ height: "690px", borderRadius: "50%" }} 
                         className="face-focused"
                     />
                 </div>
