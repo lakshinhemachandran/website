@@ -14,6 +14,12 @@ export default function Projects () {
       url="https://quantumdev.cc"
       github="https://github.com/lakshinhemachandran/website"
     />
+    <ProjectCard
+      title="Pokemon Finder"
+      description="A very simple No-CSS project where you can input the name of a Pokemon and get an image of it as a result"
+      url="https://pokemon-finder.quantumdev.cc"
+      github="https://github.com/lakshinhemachandran/Pokemon-Finder"
+    />  
   </div>
 </>
     )
