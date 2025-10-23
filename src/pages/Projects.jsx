@@ -19,6 +19,11 @@ export default function Projects () {
       description="A very simple No-CSS project where you can input the name of a Pokemon and get an image of it as a result"
       url="https://pokemon-finder.quantumdev.cc"
       github="https://github.com/lakshinhemachandran/Pokemon-Finder"
+    />
+    <ProjectCard
+      title="Weather App"
+      description="A weather app built with JavaScript that uses the VisualCrossing Weather API. There is no live demo yet due to API key limitations."
+      github="https://github.com/lakshinhemachandran/WeatherApp"
     />  
   </div>
 </>
