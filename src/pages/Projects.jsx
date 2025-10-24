@@ -24,6 +24,13 @@ export default function Projects () {
       title="Weather App"
       description="A weather app built with JavaScript that uses the VisualCrossing Weather API. There is no live demo yet due to API key limitations."
       github="https://github.com/lakshinhemachandran/WeatherApp"
+    /> 
+    <ProjectCard
+      title="Todo List App"
+      description="A simple todo list app built with React.js"
+      url="https://todo-list.projects.quantumdev.cc/"
+      github="https://github.com/lakshinhemachandran/ReactTodoListApp"
+    
     />  
   </div>
 </>
