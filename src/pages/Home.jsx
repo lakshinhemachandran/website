@@ -11,7 +11,7 @@ export default function Home() {
             <div className="grid-container">
                 <div className="grid-item">
                     <img 
-                        src="https://quantum.is-a.dev/images/image.jpg" 
+                        src="https://avatars.githubusercontent.com/u/118491175?v=4" 
                         alt="Lakshin Hemachandran"
                         className="face-focused"
                     />
@@ -20,7 +20,7 @@ export default function Home() {
                     <h5>👋 Hey, I'm</h5>
                     <h1>Lakshin Hemachandran</h1>
                     <h3>Aspiring Full Stack + ML Developer</h3>
-                    <p> I'm a passionate middle school developer from India, living in the US. I'm currently learning React.js and love turning ideas into impactful products. </p>
+                    <p> I'm a passionate middle school developer. I'm currently learning React.js and love turning ideas into impactful products. </p>
                     <div className="button-group">
                         <Link className="button btn-1" to="/projects">Projects</Link>
                         <Link className="button btn-2" to="/contact">Contact</Link>
