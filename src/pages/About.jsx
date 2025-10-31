@@ -10,6 +10,7 @@ export default function About() {
         <h1>About Me</h1>
         <p>
           Hi there! I'm Lakshin Hemachandran. I was born in Chennai, India, and came to the United States when I was young. I love finding different ways to play with technology and loving solving problems and making projects. I am currently exploring Full Stack Web Development and hope to touch Machine Learning as well. Look down to see my skills so far!
+          Fun Fact: I learned most of HTML and CSS in 6th grade math class.
         </p>
         <h2> Skills </h2>
         <p>
