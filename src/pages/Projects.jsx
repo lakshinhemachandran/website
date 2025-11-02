@@ -11,13 +11,13 @@ export default function Projects () {
     <ProjectCard
       title="Portfolio Website"
       description="A simple portfolio website made to showcase my skills in a sleek and modern format created with React.js"
-      url="https://quantumdev.cc"
+      url="https://lakshin.dev"
       github="https://github.com/lakshinhemachandran/website"
     />
     <ProjectCard
       title="Pokemon Finder"
       description="A very simple No-CSS project where you can input the name of a Pokemon and get an image of it as a result"
-      url="https://pokemon-finder.quantumdev.cc"
+      url="https://pokemon-finder.lakshin.dev"
       github="https://github.com/lakshinhemachandran/Pokemon-Finder"
     />
     <ProjectCard
@@ -28,7 +28,7 @@ export default function Projects () {
     <ProjectCard
       title="Todo List App"
       description="A simple todo list app built with React.js"
-      url="https://todo-list.projects.quantumdev.cc/"
+      url="https://todo-list.lakshin.dev"
       github="https://github.com/lakshinhemachandran/ReactTodoListApp"
     
     />  
