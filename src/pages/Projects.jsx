@@ -9,7 +9,7 @@ export default function Projects () {
   <Navbar />
   <div className="projects-container">
       <ProjectCard
-      title="undercurrent"
+      title="Undercurrent"
       description='WORK IN PROGRESS - Undercurrent is a private, premium mental health self-reflection platform designed specifically to help teenagers explore and manage stress, anxiety, and emotional overload. The platform offers an anonymous first-pass reflection quiz that lets users track progress safely before registering an account, alongside a secure "Therapy Journey Memory" hub for storing upcoming appointments, moods, and journal notes. It intentionally utilizes gentle retention mechanics, like progress waves and milestone badges, to encourage healthy habits without clinical labels or toxic engagement pressure. Please note that Undercurrent is strictly a self-reflection tool and does not provide medical diagnoses, professional therapy, or emergency crisis care.'
       url="https://undercurrent.lakshin.dev"
       github="https://github.com/lakshinhemachandran/undercurrent"
